@@ -11804,7 +11804,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 检查你的Python版本</span>
@@ -11820,7 +11820,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 引入这个项目需要的库</span>
@@ -11876,7 +11876,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 显示数据集的一个描述</span>
@@ -12019,7 +12019,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#### TODO：从数据集中选择三个你希望抽样的数据点的索引</span>
@@ -12138,9 +12138,36 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>回答:</strong></p>
 <ul>
-<li>第一个样本应该是零售商，杂货和洗涤用品的花费比较大，熟食非常小</li>
-<li>第二个样本应该是一家超市，生鲜和熟食的花费明显比较大</li>
-<li>第三个样本总体花费较低，规模不大，几乎不买洗涤卫生用品，应该是一家咖啡馆或者餐馆</li>
+<li>样本一:<ul>
+<li>鲜食 Fresh：9670 小于均值12000，但是大于和接近中位数8504，也算大约中间位置</li>
+<li>牛奶 Milk：7027 接近75th分位 7190，算是偏大的值</li>
+<li>杂货 Grocery：10471 也约等于 75th分位 10655，偏大的值</li>
+<li>冷冻 Frozen：541 小于25th分位742和均值，算是很小的值</li>
+<li>洗涤卫生品 Detergents_Paper：4618 超过了75th分位，算是很大的值</li>
+<li>熟食 Delicatessen：65 远小于25th分位，是很小的值
+综上所述，该样本在洗涤用品，杂货和牛奶上花费大，在冷冻食品上花费小，应该是零售商</li>
+</ul>
+</li>
+<li>样本二：<ul>
+<li>鲜食 Fresh：15603 大于均值，接近75th分位，算是偏大</li>
+<li>牛奶 Milk：2703 小于均值和中位数，但大于25th分位，算是较小的值</li>
+<li>杂货 Grocery：3833 与小于均值和中位数，但大于25th分位，算是较小的值</li>
+<li>冷冻 Frozen：4260 大于中位数和75th分位，很大的值</li>
+<li>洗涤卫生品 Detergents_Paper：325 远小于平均数，接近25th分位，算较小的值</li>
+<li>熟食 Delicatessen：2563 大于75th分位和中位数，很大的值
+综上，该样本冷冻，熟食，鲜食花费较大，牛奶，杂货和洗涤用品花费小，应该是餐馆</li>
+</ul>
+</li>
+<li>样本三：<ul>
+<li>鲜食 Fresh：2647 小于25th分位，很小</li>
+<li>牛奶 Milk：2761 介于25th分位和中位数之间，较小</li>
+<li>杂货 Grocery：2313 接近25th分位，较小</li>
+<li>冷冻 Frozen：907 接近25th分位，较小</li>
+<li>洗涤卫生品 Detergents_Paper：95 远小于25th分位，很小</li>
+<li>熟食 Delicatessen：1827 大于均值和75th分位，较大
+综上，该样本主要采购熟食，其余都较少，可能是咖啡馆</li>
+</ul>
+</li>
 </ul>
 
 </div>
@@ -12167,7 +12194,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[84]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO：为DataFrame创建一个副本，用&#39;drop&#39;函数丢弃一些指定的特征</span>
@@ -12244,7 +12271,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 对于数据中的每一对特征构造一个散布矩阵</span>
@@ -14036,7 +14063,7 @@ RU5ErkJggg==
 <p><strong>回答:</strong></p>
 <ul>
 <li>从scatter matrix上看到，Grocery/Detergents_Paper/Milk 这三者之间均存在近似线性正相关，这也验证了我上面预测的结果。</li>
-<li>这些数据的分布有点接近幂律分布，向左很倾斜，向右则有一个长尾</li>
+<li>这些数据的分布呈正偏态分布，向左很倾斜，向右则有一个长尾</li>
 </ul>
 
 </div>
@@ -14067,7 +14094,7 @@ RU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO：使用自然对数缩放数据</span>
@@ -18165,7 +18192,7 @@ MRgMBoPBYDAYDJsC4/wYDAaDwWAwGAyGTcH/DzI4ezSBjeTkAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[86]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 展示经过对数变换后的样本数据</span>
@@ -18272,7 +18299,7 @@ MRgMBoPBYDAYDJsC4/wYDAaDwWAwGAyGTcH/DzI4ezSBjeTkAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[92]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 对于每一个特征，找到值异常高或者是异常低的数据点</span>
@@ -19070,6 +19097,7 @@ MRgMBoPBYDAYDJsC4/wYDAaDwWAwGAyGTcH/DzI4ezSBjeTkAAAAAElFTkSuQmCC
 <p><strong>回答:</strong></p>
 <ul>
 <li>154, 128, 75, 66, 65. 这些异常数据点从数据集中移除较好，否则它们会给模型带来偏差。</li>
+<li>我们选择移除那些在多个特征上均异常的点，我考虑原因是如果一个数据仅在一个特征上异常，那么在PCA算法中投射到转换坐标轴上不一定会异常；而如果多个特征上都异常，则很可能（不是一定）投射到转换坐标上的新特征上仍然也是一个异常值。因此需要删除。</li>
 </ul>
 
 </div>
@@ -19100,7 +19128,7 @@ MRgMBoPBYDAYDJsC4/wYDAaDwWAwGAyGTcH/DzI4ezSBjeTkAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[94]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO：通过在good data上使用PCA，将其转换成和当前特征数一样多的维度</span>
@@ -19483,7 +19511,7 @@ JElSh4FJkiRJkjoMTJIkSZLUYWCSJEmSpI7/B/+dfciLMip2AAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[95]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 展示经过PCA转换的sample log-data</span>
@@ -19587,7 +19615,7 @@ JElSh4FJkiRJkjoMTJIkSZLUYWCSJEmSpI7/B/+dfciLMip2AAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[96]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO：通过在good data上进行PCA，将其转换成两个维度</span>
@@ -19620,7 +19648,7 @@ JElSh4FJkiRJkjoMTJIkSZLUYWCSJEmSpI7/B/+dfciLMip2AAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[97]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 展示经过两个维度的PCA转换之后的样本log-data</span>
@@ -19703,7 +19731,7 @@ JElSh4FJkiRJkjoMTJIkSZLUYWCSJEmSpI7/B/+dfciLMip2AAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[103]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Create a biplot</span>
@@ -19720,13 +19748,13 @@ JElSh4FJkiRJkjoMTJIkSZLUYWCSJEmSpI7/B/+dfciLMip2AAAAAElFTkSuQmCC
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[103]:</div>
+<div class="prompt output_prompt">Out[17]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xe127b70&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xe7d0f60&gt;</pre>
 </div>
 
 </div>
@@ -20860,30 +20888,37 @@ AABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[118]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO：在降维后的数据上使用你选择的聚类算法</span>
 <span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">KMeans</span>
 
-<span class="n">cluster_number</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="n">clusterer</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span> <span class="o">=</span> <span class="n">cluster_number</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
-<span class="n">clusterer</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">reduced_data</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">try_cluster_number</span><span class="p">(</span><span class="n">cluster_number</span><span class="p">):</span>
+    <span class="n">clusterer</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span> <span class="o">=</span> <span class="n">cluster_number</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">clusterer</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">reduced_data</span><span class="p">)</span>
 
-<span class="c1"># TODO：预测每一个点的簇</span>
-<span class="n">preds</span> <span class="o">=</span> <span class="n">clusterer</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">reduced_data</span><span class="p">)</span>
+    <span class="c1"># TODO：预测每一个点的簇</span>
+    <span class="n">preds</span> <span class="o">=</span> <span class="n">clusterer</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">reduced_data</span><span class="p">)</span>
 
-<span class="c1"># TODO：找到聚类中心</span>
-<span class="n">centers</span> <span class="o">=</span> <span class="n">clusterer</span><span class="o">.</span><span class="n">cluster_centers_</span>
+    <span class="c1"># TODO：找到聚类中心</span>
+    <span class="n">centers</span> <span class="o">=</span> <span class="n">clusterer</span><span class="o">.</span><span class="n">cluster_centers_</span>
 
-<span class="c1"># TODO：预测在每一个转换后的样本点的类</span>
-<span class="n">sample_preds</span> <span class="o">=</span> <span class="n">clusterer</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">pca_samples</span><span class="p">)</span>
+    <span class="c1"># TODO：预测在每一个转换后的样本点的类</span>
+    <span class="n">sample_preds</span> <span class="o">=</span> <span class="n">clusterer</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">pca_samples</span><span class="p">)</span>
 
-<span class="c1"># TODO：计算选择的类别的平均轮廓系数（mean silhouette coefficient）</span>
-<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">silhouette_score</span>
-<span class="n">score</span> <span class="o">=</span> <span class="n">silhouette_score</span><span class="p">(</span><span class="n">reduced_data</span><span class="p">,</span> <span class="n">preds</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="c1"># TODO：计算选择的类别的平均轮廓系数（mean silhouette coefficient）</span>
+    <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">silhouette_score</span>
+    <span class="n">score</span> <span class="o">=</span> <span class="n">silhouette_score</span><span class="p">(</span><span class="n">reduced_data</span><span class="p">,</span> <span class="n">preds</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
 
-<span class="k">print</span> <span class="s2">&quot;ss score: {:.3f} for cluster number {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">score</span><span class="p">,</span> <span class="n">cluster_number</span><span class="p">)</span> 
+    <span class="k">print</span> <span class="s2">&quot;ss score: {:.3f} for cluster number {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">score</span><span class="p">,</span> <span class="n">cluster_number</span><span class="p">)</span> 
+    <span class="k">return</span> <span class="n">preds</span><span class="p">,</span> <span class="n">centers</span><span class="p">,</span> <span class="n">sample_preds</span>
+
+<span class="n">cluster_numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">cn</span> <span class="ow">in</span> <span class="n">cluster_numbers</span><span class="p">:</span>
+    <span class="n">try_cluster_number</span><span class="p">(</span><span class="n">cn</span><span class="p">)</span>
+
+<span class="n">preds</span><span class="p">,</span> <span class="n">centers</span><span class="p">,</span> <span class="n">sample_preds</span> <span class="o">=</span> <span class="n">try_cluster_number</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -20901,6 +20936,15 @@ AABJRU5ErkJggg==
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>ss score: 0.426 for cluster number 2
+ss score: 0.397 for cluster number 3
+ss score: 0.332 for cluster number 4
+ss score: 0.351 for cluster number 5
+ss score: 0.367 for cluster number 6
+ss score: 0.363 for cluster number 7
+ss score: 0.351 for cluster number 8
+ss score: 0.354 for cluster number 9
+ss score: 0.351 for cluster number 10
+ss score: 0.426 for cluster number 2
 </pre>
 </div>
 </div>
@@ -20941,7 +20985,7 @@ AABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[119]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 从已有的实现中展示聚类的结果</span>
@@ -21611,7 +21655,7 @@ gg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[122]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO：反向转换中心点</span>
@@ -21714,8 +21758,26 @@ gg==
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>回答:</strong></p>
 <ul>
-<li>Seg 0 客户在鲜食花费较高，其余类较低，比较像餐馆</li>
-<li>Seg 1 类客户主要在杂货，牛奶和洗涤剂上花费较高，比较像超市</li>
+<li>Seg 0 <ul>
+<li>Fresh: 8867 比较接近中位数 </li>
+<li>Milk: 1897 接近25th分位，较小</li>
+<li>Grocery: 2477 接近25th分位，较小</li>
+<li>Frozen: 2088 小于均值但介于25th和75th分位之间，属于中等值</li>
+<li>Detergents_Paper: 294 接近25th分位，较小</li>
+<li>Delicatessen: 681 介于25th分位和中位数之间
+这类客户鲜食和冷冻花费处于中等，其余值较小，应该是餐馆类</li>
+</ul>
+</li>
+<li>Seg 1 <ul>
+<li>Fresh: 4005 接近25th分位，较小</li>
+<li>Milk: 7900 接近75th分位，较大</li>
+<li>Grocery: 12104 大于75th分位，很大</li>
+<li>Frozen: 952 小于均值，介于25th和75th之间，较小</li>
+<li>Detergents_Paper: 4561 大于75th，很大</li>
+<li>Delicatessen: 1036 大于中位数，小于均值，中等
+这类客户主要在杂货和洗涤剂上花费较高，熟食中等，其余较小，比较像零售商</li>
+</ul>
+</li>
 </ul>
 
 </div>
@@ -21733,7 +21795,7 @@ gg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[123]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 显示预测结果</span>
@@ -21773,9 +21835,12 @@ Sample point 2 predicted to be in Cluster 0
 <p><strong>回答:</strong>
 这是前面的样本分析：</p>
 <ul>
-<li>第一个样本应该是零售商，杂货和洗涤用品的花费比较大，熟食非常小 -- 被划为Seg 1，也算吻合</li>
-<li>第二个样本应该是一家超市，生鲜和熟食的花费明显比较大 -- 被划为Seg 0，不太吻合。主要是最优聚类仅仅只有2个组……</li>
-<li>第三个样本总体花费较低，规模不大，几乎不买洗涤卫生用品，应该是一家咖啡馆或者餐馆 -- 被划分为Seg 0，比较吻合</li>
+<li>样本一:
+  综上所述，该样本在洗涤用品，杂货和牛奶上花费大，在冷冻食品上花费小，应该是零售商 -- 分类为1，吻合</li>
+<li>样本二：
+  综上，该样本冷冻，熟食，鲜食花费较大，牛奶，杂货和洗涤用品花费小，应该是餐馆 -- 分类为0，吻合</li>
+<li>样本三：
+  综上，该样本主要采购熟食，其余都较少，可能是咖啡馆 -- 分类为0，吻合</li>
 </ul>
 
 </div>
@@ -21826,7 +21891,7 @@ Sample point 2 predicted to be in Cluster 0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[124]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
@@ -21899,7 +21964,7 @@ Sample point 2 predicted to be in Cluster 0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[125]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 根据‘Channel‘数据显示聚类的结果</span>
