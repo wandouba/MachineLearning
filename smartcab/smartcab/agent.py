@@ -3,6 +3,7 @@ import math
 from environment import Agent, Environment
 from planner import RoutePlanner
 from simulator import Simulator
+import numpy as np
 
 class LearningAgent(Agent):
     """ An agent that learns to drive in the Smartcab world.
@@ -47,7 +48,7 @@ class LearningAgent(Agent):
             #self.epsilon = math.cos(0.014 * self.env.round)
             #self.epsilon = self.epsilon - 0.002
             #self.epsilon = math.exp(-0.01 * self.env.round) * self.epsilon
-            self.epsilon = math.pow(0.992, self.env.round) * 0.8
+            self.epsilon = math.pow(0.992, self.env.round) * 0.85
             #self.epsilon = math.exp(-0.01 * self.env.round)
             #self.alpha = math.pow(0.999, self.env.round) * self.alpha
 
@@ -81,16 +82,14 @@ class LearningAgent(Agent):
         ###########
         # Calculate the maximum Q-value of all actions for a given state
         max_q_action = ''
-        max_q = -99999999999.0
-        #if not self.Q.has_key(state):
-        #    self.Q[state] = {'forward': 0.0, 'left': 0.0, 'right': 0.0}
         action_qv_map = self.Q[state]
+        max_q = np.max(action_qv_map.values())
+        max_q_actions = []
         for action in action_qv_map.keys():
-            if action_qv_map[action] >= max_q:
-                max_q_action = action
-                max_q = action_qv_map[action]
-
-        return max_q_action, max_q 
+            if action_qv_map[action] == max_q:
+                max_q_actions.append(action)
+                
+        return random.choice(max_q_actions) 
 
 
     def createQ(self, state):
@@ -125,7 +124,7 @@ class LearningAgent(Agent):
         #   Otherwise, choose an action with the highest Q-value for the current state
         if self.learning:
             if random.random() > self.epsilon:
-                action, max_q = self.get_maxQ(state)
+                action = self.get_maxQ(state)
             else:
                 action = random.choice(self.valid_actions)
         else:
@@ -185,7 +184,7 @@ def run():
     #   learning   - set to True to force the driving agent to use Q-learning
     #    * epsilon - continuous value for the exploration factor, default is 1
     #    * alpha   - continuous value for the learning rate, default is 0.5
-    agent = env.create_agent(LearningAgent, learning = True, epsilon = 0.8, alpha = 0.1)
+    agent = env.create_agent(LearningAgent, learning = True, epsilon = 0.8, alpha = 0.3)
     
     ##############
     # Follow the driving agent
