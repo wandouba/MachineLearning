@@ -536,7 +536,7 @@ tests.test_train_nn(train_neural_network)
 # 实现函数 `print_stats` 以输出损失和验证准确率。使用全局变量 `valid_features` 和 `valid_labels` 计算验证准确率。使用保留率 `1.0` 计算损失和验证准确率（loss and validation accuracy）。
 # 
 
-# In[14]:
+# In[34]:
 
 
 def print_stats(session, feature_batch, label_batch, cost, accuracy):
@@ -550,7 +550,7 @@ def print_stats(session, feature_batch, label_batch, cost, accuracy):
     """
     # TODO: Implement Function
     cost_value = session.run(cost, feed_dict = {x: feature_batch, y: label_batch, keep_prob: 1.0})
-    accuracy_value = session.run(accuracy, feed_dict = {x: feature_batch, y: label_batch, keep_prob: 1.0})
+    accuracy_value = session.run(accuracy, feed_dict = {x: valid_features, y: valid_labels, keep_prob: 1.0})
     print("Cost: {:.4f}, Accuracy: {:.4f}".format(cost_value, accuracy_value))
 
 
@@ -566,11 +566,11 @@ def print_stats(session, feature_batch, label_batch, cost, accuracy):
 #  * ...
 # * 设置 `keep_probability` 表示使用丢弃时保留节点的概率
 
-# In[25]:
+# In[36]:
 
 
 # TODO: Tune Parameters
-epochs = 40
+epochs = 60
 batch_size = 256
 keep_probability = 0.5
 
@@ -580,7 +580,7 @@ keep_probability = 0.5
 # 我们先用单个部分，而不是用所有的 CIFAR-10 批次训练神经网络。这样可以节省时间，并对模型进行迭代，以提高准确率。最终验证准确率达到 50% 或以上之后，在下一部分对所有数据运行模型。
 # 
 
-# In[31]:
+# In[35]:
 
 
 """
@@ -604,7 +604,7 @@ with tf.Session() as sess:
 # 
 # 现在，单个 CIFAR-10 部分的准确率已经不错了，试试所有五个部分吧。
 
-# In[32]:
+# In[37]:
 
 
 """
@@ -640,7 +640,7 @@ with tf.Session() as sess:
 # 
 # 利用测试数据集测试你的模型。这将是最终的准确率。你的准确率应该高于 50%。如果没达到，请继续调整模型结构和参数。
 
-# In[33]:
+# In[38]:
 
 
 """
