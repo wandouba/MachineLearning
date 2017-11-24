@@ -23,6 +23,10 @@ Training time
 --
 In my final model the training time is 364 seconds,  about 6 minutes.
 
+Code
+--
+For full code please check my notebook: [rossmann_xgb.ipynb](rossmann_xgb.ipynb)
+
 Results
 --
 I submitted y result.csv to Kaggle to get the score. My best score is 0.112264:
