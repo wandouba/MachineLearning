@@ -536,9 +536,6 @@ tests.test_train_nn(train_neural_network)
 # 实现函数 `print_stats` 以输出损失和验证准确率。使用全局变量 `valid_features` 和 `valid_labels` 计算验证准确率。使用保留率 `1.0` 计算损失和验证准确率（loss and validation accuracy）。
 # 
 
-# In[14]:
-
-
 def print_stats(session, feature_batch, label_batch, cost, accuracy):
     """
     Print information about loss and validation accuracy
@@ -566,11 +563,16 @@ def print_stats(session, feature_batch, label_batch, cost, accuracy):
 #  * ...
 # * 设置 `keep_probability` 表示使用丢弃时保留节点的概率
 
-# In[25]:
-
 
 # TODO: Tune Parameters
 epochs = 40
+
+# In[36]:
+
+
+# TODO: Tune Parameters
+epochs = 60
+>>>>>>> d17bcb3894f7980c58b1669a34afbbfb68aaba19
 batch_size = 256
 keep_probability = 0.5
 
@@ -579,9 +581,6 @@ keep_probability = 0.5
 # 
 # 我们先用单个部分，而不是用所有的 CIFAR-10 批次训练神经网络。这样可以节省时间，并对模型进行迭代，以提高准确率。最终验证准确率达到 50% 或以上之后，在下一部分对所有数据运行模型。
 # 
-
-# In[31]:
-
 
 """
 DON'T MODIFY ANYTHING IN THIS CELL
@@ -603,9 +602,6 @@ with tf.Session() as sess:
 # ### 完全训练模型
 # 
 # 现在，单个 CIFAR-10 部分的准确率已经不错了，试试所有五个部分吧。
-
-# In[32]:
-
 
 """
 DON'T MODIFY ANYTHING IN THIS CELL
@@ -640,12 +636,10 @@ with tf.Session() as sess:
 # 
 # 利用测试数据集测试你的模型。这将是最终的准确率。你的准确率应该高于 50%。如果没达到，请继续调整模型结构和参数。
 
-# In[33]:
-
-
 """
 DON'T MODIFY ANYTHING IN THIS CELL
 """
+
 get_ipython().magic('matplotlib inline')
 get_ipython().magic("config InlineBackend.figure_format = 'retina'")
 
