@@ -8,7 +8,7 @@ https://www.kaggle.com/c/rossmann-store-sales
 
 Rossmann operates over 3,000 drug stores in 7 European countries. In their first Kaggle competition, Rossmann is challenging you to predict 6 weeks of daily sales for 1,115 stores located across Germany.
 
-All my entire thoughts, design and implementation process is in the [Rossmann Sales Prediction.pdf](Rossmann%20Sales%20Prediction.pdf)
+All my entire thoughts, design and implementation process is in the [RossmannSalesPrediction.pdf](RossmannSalesPrediction.pdf)
 
 Hardware
 ----
