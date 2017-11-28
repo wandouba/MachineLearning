@@ -27,6 +27,11 @@ Code
 --
 For full code please check my notebook: [rossmann_xgb.ipynb](rossmann_xgb.ipynb)
 
+Dataset
+--
+
+Data set is also included as: [train.csv](train.csv), [store.csv](store.csv) and [test.csv](test.csv), 
+
 Results
 --
 I submitted y result.csv to Kaggle to get the score. My best score is 0.112264:
